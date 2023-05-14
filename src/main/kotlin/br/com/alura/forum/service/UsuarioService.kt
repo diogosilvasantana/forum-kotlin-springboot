@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service
 import java.util.Arrays
 
 @Service
-class UsuarioService(var usuarios: List<Usuario>) {
+class UsuarioService(final var usuarios: List<Usuario>) {
 
     init {
         val usuario = Usuario(
@@ -17,9 +17,9 @@ class UsuarioService(var usuarios: List<Usuario>) {
     }
 
     fun buscarPorId(id: Long): Usuario {
-        return usuarios.stream().filter({
-            usuario -> usuario.id == id
-        }).findFirst().get()
+        return usuarios.stream().filter { usuario ->
+            usuario.id == id
+        }.findFirst().get()
     }
 
 }
