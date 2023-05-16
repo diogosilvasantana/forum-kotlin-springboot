@@ -3,6 +3,7 @@ package br.com.alura.forum.mapper
 import br.com.alura.forum.dto.TopicoView
 import br.com.alura.forum.model.Topico
 import org.springframework.stereotype.Component
+import java.time.LocalDateTime
 
 @Component
 class TopicoViewMapper: Mapper<Topico, TopicoView> {
@@ -13,6 +14,7 @@ class TopicoViewMapper: Mapper<Topico, TopicoView> {
                 mensagem = t.mensagem,
                 status = t.status,
                 dataCriacao = t.dataCriacao,
+                dataAtualizacao = LocalDateTime.now()
         )
     }
 
