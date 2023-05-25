@@ -5,3 +5,6 @@ CREATE TABLE curso(
 );
 
 INSERT INTO curso VALUES (1, 'Kotlin', 'Programação');
+INSERT INTO curso VALUES (2, 'HTML', 'Front-end');
+INSERT INTO curso VALUES (3, 'React', 'Front-end');
+INSERT INTO curso VALUES (4, 'C#', 'Back-End');
