@@ -9,3 +9,6 @@ spring:
     password: aluracursos
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
+
+jwt:
+  secret: secreto
