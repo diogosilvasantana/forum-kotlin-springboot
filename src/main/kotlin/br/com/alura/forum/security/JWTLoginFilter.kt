@@ -25,8 +25,8 @@ class JWTLoginFilter(
     }
 
     override fun successfulAuthentication(request: HttpServletRequest?, response: HttpServletResponse?, chain: FilterChain?, authResult: Authentication?) {
-        val username = (authResult?.principal as UserDetail).username
-        val token = jwtUtil.generateToken(username)
+        val user = (authResult?.principal as UserDetail)
+        val token = jwtUtil.generateToken(user.username, user.authorities)
         response?.addHeader("Authorization", "Bearer $token")
     }
 
